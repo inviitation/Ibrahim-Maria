@@ -57,7 +57,7 @@ btn.onclick=()=>{
   }
 };
 
-/* 🌐 تغيير اللغة (الحل الصح هنا) */
+/* 🌐 تغيير اللغة */
 langBtn.onclick = () => {
   currentLang = currentLang === "en" ? "ar" : "en";
 
@@ -68,10 +68,7 @@ langBtn.onclick = () => {
 
     setTimeout(() => {
       el.innerHTML = el.getAttribute("data-" + currentLang);
-
-      // 👇 أهم سطر (حل المشكلة)
       el.style.direction = currentLang === "ar" ? "rtl" : "ltr";
-
       el.classList.remove("fade");
     }, 150);
   });
@@ -80,7 +77,7 @@ langBtn.onclick = () => {
 };
 
 /* ⏳ العداد */
-const t=new Date("May 14, 2026 20:00").getTime();
+const t = new Date("July 14, 2026 17:00").getTime();
 
 setInterval(()=>{
   let d=t-Date.now();
