@@ -28,7 +28,6 @@ intro.onclick = () => {
   langBtn.style.display = "block";
 };
 
-/* 🎵 الصوت */
 function fadeInMusic(){
   music.volume = 0;
   music.play().catch(()=>{});
@@ -57,7 +56,6 @@ btn.onclick=()=>{
   }
 };
 
-/* 🌐 تغيير اللغة */
 langBtn.onclick = () => {
   currentLang = currentLang === "en" ? "ar" : "en";
 
@@ -68,7 +66,6 @@ langBtn.onclick = () => {
 
     setTimeout(() => {
       el.innerHTML = el.getAttribute("data-" + currentLang);
-      el.style.direction = currentLang === "ar" ? "rtl" : "ltr";
       el.classList.remove("fade");
     }, 150);
   });
@@ -76,7 +73,6 @@ langBtn.onclick = () => {
   langBtn.textContent = currentLang === "en" ? "AR" : "EN";
 };
 
-/* ⏳ العداد */
 const t = new Date("July 14, 2026 17:00").getTime();
 
 setInterval(()=>{
@@ -93,7 +89,6 @@ function upd(id,v){
   e.textContent=v;
 }
 
-/* ❤️ القلوب */
 document.addEventListener("click",(e)=>{
   let h=document.createElement("div");
   h.className="heart";
